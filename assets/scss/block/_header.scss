@@ -4,8 +4,17 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+.header-logo
+{
+  transition: 0.5s;
+  &:hover
+  {
+    transform: scale(1.1)
+
+  }
 }
 .header-list
 {
@@ -27,33 +36,40 @@
     height: 3px;
     left: 0;
     right: 0;
-    bottom: -34px;
+    bottom: -24px;
     background: #46A358;
   }
   a {
     font-weight: 700;
   }
 }
-.header-item a
+.header-link
 {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #3D3D3D;
-}
-.header-item:hover a
-{
+  transition: 0.5s;
   &::after
   {
     content: '';
     position: absolute;
-    max-width: 100%;
+    max-width: 0;
     height: 3px;
     left: 0;
     right: 0;
-    bottom: -34px;
+    bottom: -24px;
     background: #46A358;
+    transition: 0.5s;
   }
+  &:hover
+  {
+    color: #46A358;
+  }
+}
+.header-link:hover::after
+{
+    max-width: 100%;
 }
 .header-navbar
 {
@@ -68,6 +84,11 @@
   border: none;
   background-image: url('/assets/images/search.svg');
   background-color: transparent;
+  transition: all 0.5s ease;
+  &:hover
+  {
+    transform: translateY(-4px);
+  }
 }
 .header-login__shop
 {
@@ -78,7 +99,11 @@
   background-color: transparent;
   margin-left: 30px;
   margin-right: 35px;
-  
+  transition: all 0.5s ease;
+  &:hover
+  {
+    transform: translateY(-4px);
+  }
 }
 .header-login__green-btn
 {
@@ -94,6 +119,16 @@
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 18px;
+  transition: all 0.5s ease;
+  &:hover
+  {
+    background: #07de32;
+    background-image: url('/assets/images/logout.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 18px;
+    transform: translateY(-4px);
+  }
 }
 .header-wrapper__mobile
 {
