@@ -1,3 +1,7 @@
+.hero-description1
+{
+  display: none;
+}
 .hero-block
 {
   background-image: url('/assets/images/desktop-hero.png');
@@ -70,6 +74,7 @@
     background-size: cover;
     background-position-x: center;
     border-radius: 72px;
+    padding: 20px;
   }
   .hero-title
   {
@@ -88,9 +93,64 @@
   }
   .hero-description
   {
+    display: none;
+  }
+  .hero-description1
+  {
+    display: block;
+    max-width: 206px;
     margin-top: 3px;
     padding-left: 23px;
+    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    color: #727272;
+  }
+  .hero-btn
+  {
+    height: 190px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #46A358;
+    background-color: transparent;
+    margin-left: 24px;
+    margin-bottom: 26px;
+    margin-top: 10px;
+    padding: 0;
+    height: auto;
+    position: relative;
+    &::after
+    {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    right: -20px;
+    width: 16px;
+    height: 16px;
+    background-image: url('/assets/images/arrow-right.svg');
+    animation-name: btnmover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 4;
+    transform: translateX(0);
+    }
+  }
+  @keyframes btnmover
+  {
+    0%
+    {
+      transform: translateX(0);
+    }
+    50%
+    {
+      transform: translateX(10px);
+    }
+    100%
+    {
+      transform: translateX(0);
+    }
   }
 }

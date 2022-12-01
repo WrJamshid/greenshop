@@ -11,18 +11,53 @@
   <title>GREENSHOP</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-container">
-      <div class="header-wrappaer">
-        <a class="header-logo" href="/index.html">
-          <img src="/assets/images/Logo.svg" alt="site logo greenshop text with two green list">
+  
+  <div id="modal">
+    <svg id="close-btn" onclick="toggle()" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.170067 0.170067C0.396823 -0.056689 0.764467 -0.056689 0.991223 0.170067L6 5.17884L11.0088 0.170067C11.2355 -0.056689 11.6032 -0.056689 11.8299 0.170067C12.0567 0.396823 12.0567 0.764467 11.8299 0.991223L6.82116 6L11.8299 11.0088C12.0567 11.2355 12.0567 11.6032 11.8299 11.8299C11.6032 12.0567 11.2355 12.0567 11.0088 11.8299L6 6.82116L0.991223 11.8299C0.764467 12.0567 0.396823 12.0567 0.170067 11.8299C-0.056689 11.6032 -0.056689 11.2355 0.170067 11.0088L5.17884 6L0.170067 0.991223C-0.056689 0.764467 -0.056689 0.396823 0.170067 0.170067Z" fill="#46A358"/>
+    </svg>
+    <div class="modal-content">
+      <a class="modal-login modal-content__active" href="#">Login</a>
+      <span class="modal-content__span">|</span>
+      <a class="modal-registar" href="#">Register</a>
+      <form class="modal-form">
+        <p class="modal-text">Enter your username and password to login.</p>
+        <input 
+        type="email" 
+        placeholder="almamun_uxui@outlook.com" 
+        autofocus
+        aria-label="useremail"
+        >
+        <input type="password" placeholder="your password" aria-label="userpassword">
+        <a class="modal__forget-password" href="#">
+          Forgot Password?
         </a>
-        <nav class="header-navbar">
-          <ul class="header-list">
-            <li class="header-item active">
-              <a class="header-link" href="/index.html">
-                Home
-              </a>
+        <button class="modal-content__btn">Login</button>
+        <span class="modal-content__login-with__google">Or login with</span>
+        <a class="modal-login__with-google" href="#">
+          <img src="/assets/images/google.svg" alt="google logo">
+          Login with Google
+        </a>
+        <a class="modal-login__with-facebook" href="#">
+          <img src="/assets/images/facebook.svg" alt="facebook logo">
+          Login with Facebook
+        </a>
+      </form>
+    </div>
+  </div>
+  <div  id="blur">
+    <header  id="blur" class="site-header">
+      <div class="container header-container">
+        <div class="header-wrappaer">
+          <a class="header-logo" href="/index.html">
+            <img src="/assets/images/Logo.svg" alt="site logo greenshop text with two green list">
+          </a>
+          <nav class="header-navbar">
+            <ul class="header-list">
+              <li class="header-item active">
+                <a class="header-link" href="/index.html">
+                  Home
+                </a>
             </li>
             <li class="header-item ">
               <a class="header-link" href="/shop.html">
@@ -44,7 +79,7 @@
         <div class="header-login">
           <button class="header-login__search"></button>
           <button class="header-login__shop"></button>
-          <button class="header-login__green-btn">Login</button>
+          <button id="open-btn" class="header-login__green-btn" onclick="toggle()">Login</button>
         </div>
       </div>
       <div class="header-wrapper__mobile">
@@ -62,11 +97,13 @@
           <h2 class="hero__sub-title">Let’s Make a
             Better <span>Planet</span></h2>
             <p class="hero-description">We are an online plant shop offering a wide range of cheap and trendy plants. Use <br> our plants to create an unique Urban Jungle. Order your favorite plants!</p>
+            <p class="hero-description1">We are an online plant shop offering a wide range</p>
             <button class="hero-btn">SHOP NOW</button>
-        </div>
+          </div>
       </div>
     </section>
   </main>
+</div>
   <script src="./assets/js/app.js"></script>
 </body>
 </html>
