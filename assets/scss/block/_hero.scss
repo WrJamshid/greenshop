@@ -137,6 +137,10 @@
     animation-iteration-count: 4;
     transform: translateX(0);
     }
+    &:hover
+    {
+      background-color: transparent;
+    }
   }
   @keyframes btnmover
   {
